@@ -25,6 +25,10 @@ CREATE TABLE spotify_json_data (
     raw VARIANT
 );
 
+-- data stage to table transfer
+
+COPY INTO spotify_json_data FROM @spotify_raw_data_stage FILE_FORMAT = (TYPE = 'JSON');
+
 --checking if data is loaded correctly
 select * from SPOTIFY_JSON_DATA limit 5
 
