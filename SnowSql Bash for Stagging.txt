@@ -1,4 +1,8 @@
-snowsql -a SVQAFAA-NW66790 -u tushar17jul -p 443 -r SYSADMIN  -w Spotify -d Spotify -s raw_data
+to connect to SnowSQL CLI
 
-snowsql -a SVQAFAA-NW66790 -u tushar17jul -q "PUT file://D:/Snowflake Project Spotify/light_spotify_dataset.json @spotify_raw_data_stage AUTO_COMPRESS=TRUE;"
+snowsql -a <account_id> -u <user_name> -p 443 -r SYSADMIN  -w Spotify -d Spotify -s raw_data
+
+to upload data into stage 
+
+snowsql -a <account_id> -u <user_name> -q "PUT file://D:/Snowflake Project Spotify/light_spotify_dataset.json @spotify_raw_data_stage AUTO_COMPRESS=TRUE;"
 
